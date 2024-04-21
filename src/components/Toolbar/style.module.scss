@@ -1,0 +1,20 @@
+.entry-button {
+
+	:global(.mantine-Button-inner) {
+		justify-content: start;
+	}
+
+	:global(.mantine-Button-rightIcon) {
+		margin-left: auto;
+		visibility: hidden;
+	}
+
+	:hover :global(.mantine-Button-rightIcon) {
+		visibility: visible;
+	}
+
+}
+
+.manage-button :global(.mantine-Button-inner) {
+	justify-content: start;
+}

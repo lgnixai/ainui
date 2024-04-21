@@ -1,0 +1,91 @@
+{
+	"build": {
+		"beforeDevCommand": "pnpm dev",
+		"beforeBuildCommand": "pnpm build",
+		"devPath": "http://localhost:1420",
+		"distDir": "../dist",
+		"withGlobalTauri": false
+	},
+	"package": {
+		"productName": "Surrealist",
+		"version": "../package.json"
+	},
+	"tauri": {
+		"allowlist": {
+			"window": {
+				"setAlwaysOnTop": true,
+				"setTitle": true,
+				"show": true
+			},
+			"shell": {
+				"open": true
+			},
+			"fs": {
+				"readFile": true,
+				"writeFile": true
+			},
+			"dialog": {
+				"open": true,
+				"save": true
+			},
+			"path": {
+				"all": true
+			}
+		},
+		"bundle": {
+			"active": true,
+			"category": "DeveloperTool",
+			"copyright": "",
+			"deb": {
+				"depends": []
+			},
+			"externalBin": [],
+			"icon": [
+				"icons/32x32.png",
+				"icons/128x128.png",
+				"icons/128x128@2x.png",
+				"icons/icon.icns",
+				"icons/icon.ico"
+			],
+			"identifier": "studio.starlane.surrealist",
+			"longDescription": "",
+			"macOS": {
+				"entitlements": null,
+				"exceptionDomain": "",
+				"frameworks": [],
+				"providerShortName": null,
+				"signingIdentity": null
+			},
+			"resources": [],
+			"shortDescription": "",
+			"targets": "all",
+			"windows": {
+				"certificateThumbprint": null,
+				"digestAlgorithm": "sha256",
+				"timestampUrl": "",
+				"wix": {
+					"bannerPath": "res/wix-banner.png",
+					"dialogImagePath": "res/wix-image.png"
+				}
+			}
+		},
+		"security": {
+			"csp": null
+		},
+		"updater": {
+			"active": false
+		},
+		"windows": [
+			{
+				"title": "Surrealist",
+				"fullscreen": false,
+				"resizable": true,
+				"height": 675,
+				"width": 1235,
+				"minHeight": 675,
+				"minWidth": 1235,
+				"visible": false
+			}
+		]
+	}
+}
